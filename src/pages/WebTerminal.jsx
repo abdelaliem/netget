@@ -1,7 +1,7 @@
 import React from 'react';
 import { Cpu, Server, HardDrive, Clock } from 'lucide-react';
 import StatCard from '../components/ui/StatCard';
-
+import TerminalScreen from '../components/ui/TerminalScreen';
 const WebTerminal = () => {
   return (
     <div className="flex flex-col max-w-6xl mx-auto py-6">
@@ -37,10 +37,9 @@ const WebTerminal = () => {
       </div>
 
       {/* Terminal Section */}
-
+      <TerminalScreen />
     </div>
   );
 };
 
 export default WebTerminal;
-
