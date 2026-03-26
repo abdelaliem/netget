@@ -1,109 +1,57 @@
 import React from 'react';
-import { ArrowRight, Check, BookOpen, Headset, PlayCircle, Target } from 'lucide-react';
 import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
 
 const NetworkMap = () => {
   return (
-    <div className="flex flex-col items-center max-w-5xl mx-auto py-6 px-4">
+    <div className="min-h-screen bg-[#F5EFE9] flex flex-col items-center pt-8 px-4 pb-12 w-full">
 
       {/* Welcome Header */}
-      <div className="text-center mb-6">
-        <h1 className="text-3xl md:text-4xl font-black text-brand-dark mb-2">
-          Welcome to <span className="text-brand-orange">NETGET</span>
+      <div className="text-center mb-10">
+        <h1 className="text-3xl md:text-[34px] font-black text-gray-900 mb-3 tracking-tight">
+          Scan completed
         </h1>
-
-        <p className="text-brand-gray text-base max-w-xl mx-auto leading-relaxed">
-          Start by scanning your network to discover devices and build your
-          topology. Your journey to intelligence begins here.
+        <p className="text-gray-500 text-sm md:text-[15px] max-w-xl mx-auto font-medium">
+          Initial network scan completed successfully. Here are the results.
         </p>
       </div>
-
-
-      {/* Main Discovery Panel */}
-      <div className="w-full max-w-3xl bg-white rounded-3xl shadow-lg shadow-brand-orange/5 border border-gray-100 p-8 mb-6 flex flex-col items-center text-center">
-
-        {/* Central Icon */}
-        <div className="mb-4 relative">
-          <div className="w-16 h-16 bg-brand-orange rounded-2xl flex items-center justify-center shadow-md shadow-brand-orange/20">
-            <Target className="text-white" size={32} />
-          </div>
-
-          <div className="absolute inset-0 border-2 border-brand-orange/10 rounded-2xl scale-110 animate-pulse"></div>
-        </div>
-
-
-        <h2 className="text-2xl font-black text-brand-dark mb-2">
-          Network Discovery
-        </h2>
-
-
-        <p className="text-brand-gray text-base max-w-sm mb-6 leading-relaxed">
-          Deep-packet inspection to identify every node, switch, and endpoint.
-        </p>
-
-
-        <Button
-          size="lg"
-          icon={ArrowRight}
-          iconPosition="right"
-          className="mb-6 text-base py-3 px-6"
-        >
-          Initialize Network Scan
-        </Button>
-
-
-        {/* Feature Tags */}
-        <div className="flex flex-wrap justify-center gap-4 border-t border-gray-50 pt-6 w-full">
-
-          <div className="flex items-center gap-2 text-xs font-bold text-brand-gray">
-            <div className="bg-brand-green/10 p-1 rounded-full text-brand-green">
-              <Check size={12} strokeWidth={3} />
-            </div>
-            ZERO CONFIG
-          </div>
-
-
-          <div className="flex items-center gap-2 text-xs font-bold text-brand-gray">
-            <div className="bg-brand-green/10 p-1 rounded-full text-brand-green">
-              <Check size={12} strokeWidth={3} />
-            </div>
-            REAL-TIME
-          </div>
-
-
-          <div className="flex items-center gap-2 text-xs font-bold text-brand-gray">
-            <div className="bg-brand-green/10 p-1 rounded-full text-brand-green">
-              <Check size={12} strokeWidth={3} />
-            </div>
-            SECURE
-          </div>
-
-        </div>
-      </div>
-
 
       {/* Cards Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-4xl">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl mb-12">
+        <div className="bg-white rounded-2xl shadow-sm p-10 flex flex-col items-center justify-center gap-1">
+          <span className="text-[28px] font-black text-brand-orange mb-1">15</span>
+          <span className="text-[15px] font-bold text-gray-900 text-center">Devices discovered</span>
+        </div>
 
-        <Card
-          icon={BookOpen}
-          title="Documentation"
-          description="Learn how to optimize your network mapping results"
-        />
+        <div className="bg-white rounded-2xl shadow-sm p-10 flex flex-col items-center justify-center gap-1">
+          <span className="text-[28px] font-black text-brand-orange mb-1">28</span>
+          <span className="text-[15px] font-bold text-gray-900 text-center">Open ports</span>
+        </div>
 
-        <Card
-          icon={Headset}
-          title="Contact support"
-          description="Get help from our network engineering 24/7"
-        />
+        <div className="bg-white rounded-2xl shadow-sm p-10 flex flex-col items-center justify-center gap-1">
+          <span className="text-[28px] font-black text-brand-orange mb-1">3</span>
+          <span className="text-[15px] font-bold text-gray-900 text-center">Vulnerabilities found</span>
+        </div>
+      </div>
 
-        <Card
-          icon={PlayCircle}
-          title="Quick Tutorial"
-          description="Watch a 2-minute overview of dashboard features"
-        />
+      {/* Buttons Section */}
+      <div className="flex flex-col sm:flex-row gap-4 w-full flex-wrap justify-center">
+        <Button
+          variant="ghost"
+          className="!bg-white hover:!bg-[#F2D7C4] !text-brand-orange hover:!text-gray-900 shadow-none !border-none sm:w-[320px] !rounded-2xl py-4 text-[15px] !font-bold transition-colors"
+        >
+          View network map
+        </Button>
+        <Button
+          variant="secondary"
+          className="!bg-white hover:!bg-[#F2D7C4] !text-brand-orange hover:!text-gray-900  shadow-none !border-none sm:w-[320px] !rounded-2xl py-4 text-[15px] !font-bold transition-colors"
+        >
+          Run vulnerabilities scan
+        </Button>
+      </div>
 
+      {/* Area for future network map */}
+      <div className="w-full mt-16 flex flex-col items-center w-full max-w-6xl">
+        {/* Future component will go here */}
       </div>
 
     </div>
