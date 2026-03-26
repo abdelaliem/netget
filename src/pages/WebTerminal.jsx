@@ -38,6 +38,8 @@ const WebTerminal = () => {
 
       {/* Terminal Section */}
       <TerminalScreen />
+
+
     </div>
   );
 };
