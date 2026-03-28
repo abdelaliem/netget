@@ -1,8 +1,11 @@
 import React from 'react';
 import { Search, Bell } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import Button from '../ui/Button';
 
 const Topbar = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="h-20 bg-white border-b border-gray-100 flex items-center justify-between px-8">
       <div className="flex items-center gap-6">
@@ -27,7 +30,7 @@ const Topbar = () => {
           </button>
         </div>
         
-        <Button variant="primary" size="md">
+        <Button variant="primary" size="md" onClick={() => navigate('/scan-network')}>
           Scan Network
         </Button>
       </div>

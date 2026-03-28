@@ -1,8 +1,11 @@
 import React from 'react';
 import { Info } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import Button from '../components/ui/Button';
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="flex flex-col items-center justify-center min-h-[60vh]">
       <div className="bg-white py-12 px-20 rounded-3xl shadow-xl shadow-brand-orange/5 border border-gray-100 flex flex-col items-center max-w-2xl text-center">
@@ -19,9 +22,14 @@ const Home = () => {
           Start by scanning your network to discover connected devices
         </p>
 
-        <Button variant="primary" size="lg">
-          Scan Network
-        </Button>
+        <div className="flex flex-col items-center gap-4 sm:flex-row">
+          <Button variant="primary" size="lg" onClick={() => navigate('/scan-network')}>
+            Scan Network
+          </Button>
+          <Button variant="outline" size="lg" onClick={() => navigate('/login')}>
+            Go to Login
+          </Button>
+        </div>
       </div>
     </div>
   );

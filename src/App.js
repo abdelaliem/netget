@@ -8,19 +8,25 @@ import Dashboard from './pages/Dashboard';
 import WebTerminal from './pages/WebTerminal';
 import NetworkMap from './pages/NetworkMap';
 import HomeFirstScan from './pages/HomeFirstScan';
+import Registration from './pages/Registration';
+import Login from './pages/Login';
 
 function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Registration />} />
         <Route path="/*" element={
           <MainLayout>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/terminal" element={<WebTerminal />} />
               <Route path="/map" element={<NetworkMap />} />
               <Route path="/homefirstscan" element={<HomeFirstScan />} />
+              <Route path="/scan-network" element={<HomeFirstScan />} />
             </Routes>
           </MainLayout>
         } />
