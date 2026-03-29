@@ -1,11 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Home, LayoutGrid, Terminal, Map, LogIn, ScanSearch } from 'lucide-react';
+import { Home, LayoutGrid, Terminal, Map, ScanSearch } from 'lucide-react';
 
 const navItems = [
-  { icon: Home, label: 'Home', path: '/' },
+  { icon: Home, label: 'Home', path: '/home' },
   { icon: ScanSearch, label: 'Scan Network', path: '/scan-network' },
-  { icon: LogIn, label: 'Login', path: '/login' },
   { icon: LayoutGrid, label: 'Dashboard', path: '/dashboard' },
   { icon: Terminal, label: 'Web Terminal', path: '/terminal' },
   { icon: Map, label: 'Network Map', path: '/map' },

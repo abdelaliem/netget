@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Eye, EyeOff, Lock, User } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -87,12 +86,6 @@ function Login() {
           </p>
           <p className="mt-2 text-[11px] font-medium text-[#6B7280]">Enterprise Infrastructure Access Control</p>
           <p className="mt-1 text-[11px] text-[#9CA3AF]">© 2026 NETGET Network Solutions</p>
-          <p className="mt-2 text-xs text-[#6B7280]">
-            New admin?{' '}
-            <Link to="/register" className="font-semibold text-[#F15A24] hover:opacity-80">
-              Create account
-            </Link>
-          </p>
         </footer>
       </section>
     </main>

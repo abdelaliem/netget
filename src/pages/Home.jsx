@@ -22,12 +22,9 @@ const Home = () => {
           Start by scanning your network to discover connected devices
         </p>
 
-        <div className="flex flex-col items-center gap-4 sm:flex-row">
+        <div className="flex flex-col items-center">
           <Button variant="primary" size="lg" onClick={() => navigate('/scan-network')}>
             Scan Network
-          </Button>
-          <Button variant="outline" size="lg" onClick={() => navigate('/login')}>
-            Go to Login
           </Button>
         </div>
       </div>
